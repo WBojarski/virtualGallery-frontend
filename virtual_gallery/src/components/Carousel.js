@@ -15,6 +15,7 @@ export default function ControlledCarousel() {
 					className="d-block w-100"
 					src="https://www.metmuseum.org/toah/images/hb/hb_49.70.110.jpg"
 					alt="First slide"
+					fluid
 				/>
 				<Carousel.Caption>
 					<h3>First slide label</h3>
