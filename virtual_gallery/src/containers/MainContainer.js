@@ -4,12 +4,6 @@ import ControlledCarousel from '../components/Carousel';
 
 export default class MainContainer extends Component {
 	render() {
-		return (
-			<div>
-				<Container>
-					<ControlledCarousel />
-				</Container>
-			</div>
-		);
+		return <div />;
 	}
 }
