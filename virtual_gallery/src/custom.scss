@@ -7,3 +7,23 @@ $body-bg: rgb(216, 215, 215);
 .carousel-inner>.item>a>img {
     width: 100%;
 }
+.card-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  
+    @media screen and (max-width: 768px) {
+      flex-flow: column;
+    }
+  }
+
+  .news-header-card{
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    width:150px !important;
+    height: 100%;
+  }
