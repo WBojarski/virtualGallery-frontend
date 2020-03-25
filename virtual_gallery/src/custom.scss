@@ -5,25 +5,26 @@ $body-bg: rgb(216, 215, 215);
 
 .carousel-inner>.item>img,
 .carousel-inner>.item>a>img {
-    width: 100%;
+  width: 100%;
 }
-.card-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-  
-    @media screen and (max-width: 768px) {
-      flex-flow: column;
-    }
-  }
 
-  .news-header-card{
-    position: relative;
-    display: flex;
-    flex-flow: column;
-    width:150px !important;
-    height: 100%;
-  }
+.card-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+
+  // @media screen and (max-width: 768px) {
+  //   flex-flow: flex-wrap;
+  // }
+}
+
+.news-header-card {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  width: 150px !important;
+  height: 100%;
+}
