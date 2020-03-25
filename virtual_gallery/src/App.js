@@ -4,6 +4,7 @@ import MainContainer from './containers/MainContainer';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import API from './API.js';
 import SignInForm from './containers/SignInForm';
+import HomePageCardsContainer from './containers/HomePageCardsContainer';
 
 class App extends React.Component {
 	constructor() {
@@ -41,11 +42,15 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<Router>
-				<NavBar username={this.state.username} signOut={this.signOut} />
-				<MainContainer />
-				<Route exact path="/sign-in" component={() => <SignInForm signIn={this.signIn} />} />
-			</Router>
+			<div>
+				<Router>
+					<NavBar username={this.state.username} signOut={this.signOut} />
+					<MainContainer />
+					<Route exact path="/sign-in" component={() => <SignInForm signIn={this.signIn} />} />
+				</Router>
+
+				<HomePageCardsContainer />
+			</div>
 		);
 	}
 }
