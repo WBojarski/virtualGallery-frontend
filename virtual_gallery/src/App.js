@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import API from './API.js';
 import SignInForm from './containers/SignInForm';
 import HomePageCardsContainer from './containers/HomePageCardsContainer';
+import ProfileContainer from './containers/ProfileContainer'
 
 class App extends React.Component {
 	constructor() {
@@ -13,6 +14,7 @@ class App extends React.Component {
 			username: null
 		};
 	}
+
 
 	componentDidMount() {
 		// If we have a token in localStorage, attempt to use it to validate ourselves against the server
@@ -48,8 +50,9 @@ class App extends React.Component {
 					<MainContainer />
 					<Route exact path="/sign-in" component={() => <SignInForm signIn={this.signIn} />} />
 				</Router>
-
+				<ProfileContainer username={this.state.username} />
 				<HomePageCardsContainer />
+
 			</div>
 		);
 	}
