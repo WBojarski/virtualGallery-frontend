@@ -1,5 +1,6 @@
 import React from 'react';
 import API from '../API';
+import { Form, Button } from 'semantic-ui-react'
 
 class SignInForm extends React.Component {
 	constructor(props) {
@@ -26,17 +27,24 @@ class SignInForm extends React.Component {
 
 	render() {
 		return (
-			<form onSubmit={this.handleSubmit}>
-				<label>Username:</label>
-				<input type="text" name="username" onChange={this.handleChange} />
-				<br />
+			<div className="container">
+				<Form onSubmit={this.handleSubmit}>
+					<Form.Field>
+						<label>Username:</label>
+						<input type="text" name="username" onChange={this.handleChange} />
+						<br />
+					</Form.Field>
+					<Form.Field>
+						<label>Password:</label>
+						<input type="password" name="password" onChange={this.handleChange} />
+						<br />
+					</Form.Field>
+					<Button secondary type="submit" value="Sign In" > Sign in  </Button>
 
-				<label>Password:</label>
-				<input type="password" name="password" onChange={this.handleChange} />
-				<br />
+				</Form>
+			</div>
 
-				<input type="submit" value="Sign In" />
-			</form>
+
 		);
 	}
 }

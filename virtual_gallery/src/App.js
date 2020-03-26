@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 import API from './API.js';
 import HomePageCardsContainer from './containers/HomePageCardsContainer';
 import ProfileContainer from './containers/ProfileContainer';
-
+import SignInForm from './containers/SignInForm'
 class App extends React.Component {
 	constructor() {
 		super();
@@ -37,6 +37,7 @@ class App extends React.Component {
 		return (
 			<div>
 				<NavBar username={this.state.username} signOut={this.signOut} />
+				<Route exact path="/sign-in" component={SignInForm} />
 				<Route exact path="/discover" component={HomePageCardsContainer} />
 				<Route exact path="/profile" component={ProfileContainer} />
 			</div>
