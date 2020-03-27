@@ -43,7 +43,7 @@ class App extends React.Component {
 		return (
 			<div>
 				<NavBar username={this.state.username} signOut={this.signOut} />
-				<Route exact path="/sign-in" component={SignInForm} />
+				{/* <Route exact path="/sign-in" component={SignInForm} /> */}
 				<Route exact path="/discover" component={HomePageCardsContainer} />
 				<Route exact path="/sign-in" component={LoginForm} />
 				<Route exact path="/profile" component={ProfileContainer} />
