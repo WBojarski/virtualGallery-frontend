@@ -4,8 +4,12 @@ import { Route } from 'react-router-dom';
 import API from './API.js';
 import HomePageCardsContainer from './containers/HomePageCardsContainer';
 import ProfileContainer from './containers/ProfileContainer';
+
 import LoginForm from './components/LoginForm';
 import Homepage from './components/Homepage';
+
+
+import SignInForm from './containers/SignInForm'
 
 class App extends React.Component {
 	constructor() {
@@ -39,6 +43,7 @@ class App extends React.Component {
 		return (
 			<div>
 				<NavBar username={this.state.username} signOut={this.signOut} />
+				<Route exact path="/sign-in" component={SignInForm} />
 				<Route exact path="/discover" component={HomePageCardsContainer} />
 				<Route exact path="/sign-in" component={LoginForm} />
 				<Route exact path="/profile" component={ProfileContainer} />
